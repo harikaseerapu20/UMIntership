@@ -1,150 +1,146 @@
-@import url("https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap");
-
-* {
+*{
     margin: 0;
     padding: 0;
     box-sizing: border-box;
-    font-family: "Poppins", sans-serif;
+    border: none;
+    outline: none;
+    font-family: sans-serif;
 }
 
-body {
+body{
+    min-height: 100vh;
     display: flex;
     justify-content: center;
     align-items: center;
-    min-height: 100vh;
-    background: url('images/night.jpg');
-    background-size: cover;
-    background-position: center;
+    background-color: #000;
 }
 
-.container {
-    position: relative;
+.container{
     width: 400px;
-    height: 555px;
-    background: rgba(255, 255, 255, .1);
-    backdrop-filter: blur(30px);
-    border-radius: 2px solid rgba(255, 255, 255, .2);
-    border-radius: 16px;
-    padding: 20px;
-    color: #fff;
+    height: min-content;
+    background-color: #fff;
+    border-radius: 12px;
+    padding: 28px;
 }
 
-.search-box {
-    position: relative;
+.search-box{
     width: 100%;
-    height: 55px;
+    height: min-content;
     display: flex;
+    justify-content: space-between;
     align-items: center;
 }
 
-.search-box i {
-    position: absolute;
-    left: 10px;
-    font-size: 28px;
-}
-
-
-.search-box input {
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    background: transparent;
-    border: 2px solid rgba(255, 255, 255, .2);
-    outline: none;
-    border-radius: 10px;
-    font-size: 22px;
-    color: #fff;
-    font-weight: 500;
-    text-transform: uppercase;
-    padding: 0 48px 0 42px;
-}
-
-.search-box input::placeholder {
-    color: #fff;
+.search-box input{
+    width: 84%;
+    font-size: 20px;
     text-transform: capitalize;
+    color: #000;
+    background-color: #e6f5fb;
+    padding: 12px 16px;
+    border-radius: 14px;
 }
 
-.search-box button {
-    position: absolute;
-    right: 0;
-    width: 40px;
-    height: 100%;
-    background: transparent;
-    border: none;
-    outline: none;
-    font-size: 28px;
-    color: #fff;
-    padding: 0 40px 0 5px;
+.search-box input::placeholder{
+    color: #000;
+}
+
+.search-box button{
+    width: 46px;
+    height: 46px;
+    background-color: #e6f5fb;
+    border-radius: 50%;
     cursor: pointer;
+    font-size: 20px;
 }
 
-.weather-box {
-    text-align: center;
-    margin: 40px 0;
+.search-box button:hover{
+    color: #fff;
+    background-color: #ababab;
 }
 
-.weather-box img {
+
+.weather-body{
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-block: 20px;
+    display: none;
+}
+.weather-body img{
     width: 60%;
 }
 
-.weather-box .temperature {
+.weather-box{
+    margin-block: 20px;
+    text-align: center;
+}
+
+.weather-box .temperature{
+    font-size: 40px;
+    font-weight: 800;
     position: relative;
-    font-size: 64px;
-    line-height: 1;
-    font-weight: 700;
-    margin: 20px 0 6px -30px;
 }
 
-.weather-box .temperature span {
+.weather-box .temperature sup{
+    font-size: 20px;
     position: absolute;
-    font-size: 24px;
-    margin-left: 4px;
+    font-weight: 600;
 }
 
-.weather-box .description {
-    font-size: 22px;
-    font-weight: 500;
+.weather-box .description{
+    font-size: 20px;
+    font-weight: 700;
     text-transform: capitalize;
 }
 
-.weather-details {
-    position: absolute;
-    bottom: 40px;
-    left: 0;
+.weather-details{
     width: 100%;
-    padding: 0 20px;
     display: flex;
+    justify-content: space-between;
+    margin-top: 30px;
 }
 
-.weather-details .humidity,
-.weather-details .wind {
+.humidity, .wind{
     display: flex;
     align-items: center;
-    width: 50%;
 }
 
-.weather-details .humidity {
-    padding-left: 20px;
-    justify-content: flex-start;
+.humidity{
+    margin-left: 20px;
 }
 
-.weather-details .wind {
-    padding-right: 20px;
-    justify-content: flex-end;
+.wind{
+    margin-right: 20px;
 }
 
-.weather-details i {
-    font-size: 56px;
-    margin-right: 10px;
+.weather-details i{
+    font-size: 36px;
 }
 
-.weather-details span {
-    display: inline-block;
-    font-size: 22px;
-    font-weight: 500;
+.weather-details .text{
+    margin-left: 10px;
+    font-size: 16px;
 }
 
-.weather-details p {
-    font-size: 14px;
-    font-weight: 500;
+.text span{
+    font-size: 20px;
+    font-weight: 700;
+}
+
+.location-not-found{
+    margin-top: 20px;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.location-not-found h1{
+    font-size: 20px;
+    color: #6b6b6b;
+    margin-block-end: 15px;
+}
+.location-not-found img{
+    width: 80%;
 }
